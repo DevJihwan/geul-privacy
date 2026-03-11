@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글 (Geul) - プライバシーポリシー</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #fafafa;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+            background: #fff;
+            min-height: 100vh;
+        }
+        h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; color: #111; }
+        .meta { font-size: 14px; color: #888; margin-bottom: 16px; }
+        .intro { font-size: 15px; color: #555; margin-bottom: 32px; }
+        h2 {
+            font-size: 20px; font-weight: 600; color: #222;
+            margin-top: 32px; margin-bottom: 12px;
+            padding-top: 24px; border-top: 1px solid #eee;
+        }
+        ul { list-style: none; padding: 0; }
+        ul li {
+            padding: 6px 0 6px 20px; position: relative;
+            font-size: 15px; color: #444;
+        }
+        ul li::before { content: "\2022"; position: absolute; left: 4px; color: #aaa; }
+        p { font-size: 15px; color: #444; margin-bottom: 8px; }
+        .lang-switch { display: flex; gap: 8px; margin-bottom: 24px; }
+        .lang-switch a {
+            padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 500;
+            text-decoration: none; color: #555; background: #f0f0f0; transition: all 0.2s;
+        }
+        .lang-switch a.active, .lang-switch a:hover { color: #fff; background: #2563EB; }
+        .footer {
+            margin-top: 48px; padding-top: 24px; border-top: 1px solid #eee;
+            font-size: 13px; color: #999; text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <a href="index.html">한국어</a>
+            <a href="en.html">English</a>
+            <a href="ja.html" class="active">日本語</a>
+        </div>
+
+        <h1>プライバシーポリシー</h1>
+        <p class="meta">施行日: 2026-03-09</p>
+        <p class="intro">글（以下「アプリ」）はお客様のプライバシーを尊重します。本ポリシーでは、収集する情報、その使用方法、データの管理方法について説明します。</p>
+
+        <h2>1. 収集する情報</h2>
+        <ul>
+            <li>デバイスID (UUID) — デバイスごとに生成される固有の識別子で、個人情報とは紐づけられません。</li>
+            <li>ユーザーID — アカウントと使用状況を管理するためにサーバーで生成される識別子です。</li>
+            <li>AI使用データ — レート制限のための日次・月次リクエスト数です。</li>
+            <li>サブスクリプション状態 — 適切なサービスティアを提供するために使用されます。</li>
+            <li>iCloud同期データ — 同期を有効にすると、ノートはApple iCloud Documentsに保存されます。当社はこのデータにアクセスしません。</li>
+        </ul>
+
+        <h2>2. AI機能</h2>
+        <p>AI機能を使用すると、ノートの内容が処理のためにCloudflare Workersサーバーに送信されます。</p>
+        <p>送信された内容はAnthropicのClaude APIで処理され、即座に破棄されます。当社のサーバーにノート内容は保存されません。</p>
+        <p>AI機能は完全に任意です。使用しない場合、ノートの内容はサーバーに送信されません。</p>
+
+        <h2>3. データ保存</h2>
+        <ul>
+            <li>ノート — デバイスにローカル保存 + オプションでiCloud Documentsに保存されます。</li>
+            <li>認証トークン — デバイスのキーチェーンにのみ安全に保存されます。</li>
+            <li>サーバー — device_id、user_id、使用データのみがCloudflare KVに保存されます。</li>
+        </ul>
+
+        <h2>4. データ削除</h2>
+        <ul>
+            <li>設定 > アカウント削除 — サーバー上のすべてのデータが完全に削除されます。</li>
+            <li>アプリを削除すると、デバイスのすべてのローカルデータが削除されます。</li>
+            <li>iCloudデータはデバイスのApple iCloud設定から管理できます。</li>
+        </ul>
+
+        <h2>5. 第三者サービス</h2>
+        <ul>
+            <li>Anthropic (Claude API) — AIテキスト処理。内容は保存されません。</li>
+            <li>Apple (iCloud, StoreKit) — クラウド同期とアプリ内課金。</li>
+            <li>Cloudflare (Workers, KV) — APIサーバーと使用データの保存。</li>
+        </ul>
+
+        <h2>6. お問い合わせ</h2>
+        <p>プライバシーに関するお問い合わせは <a href="mailto:support@geul.app">support@geul.app</a> までご連絡ください。</p>
+
+        <div class="footer">
+            &copy; 2026 Geul. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
